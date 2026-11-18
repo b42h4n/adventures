@@ -1,0 +1,6 @@
+Monsters 2.5D
+
+Game design and code: you
+Engine: Bevy
+
+(Edit data/credits.txt to change this text)

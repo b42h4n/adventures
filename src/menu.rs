@@ -128,8 +128,9 @@ fn settings_menu(mut commands: Commands, font: Res<UiFont>, settings: Res<Settin
 }
 
 fn read_credits() -> String {
-    for path in ["data/credits.txt", "data/credits.md", "data/credits"] {
-        if let Ok(s) = std::fs::read_to_string(path) {
+    let data = crate::asset_root().join("data");
+    for name in ["credits.txt", "credits.md", "credits"] {
+        if let Ok(s) = std::fs::read_to_string(data.join(name)) {
             return s;
         }
     }
